@@ -12,6 +12,7 @@ class AddTrade{
 
     static async AllTrades(req, res){
         const resposta = await tradesTable.find()
+        res.set('Access-Control-Allow-Origin', '*');
         res.status(200).send(resposta);
     }
 
